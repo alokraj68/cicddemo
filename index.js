@@ -2,7 +2,7 @@ const http = require('http');
 var dateModule = require('./date');
 
 const hostname = '127.0.0.1';
-const port = 3000;
+const port = process.env.port || process.env.PORT || 3000;
 var date = dateModule.myDateTime();
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
